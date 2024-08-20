@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+
+<body>
+    <div class="browser">
+        <div class="container">
+            <div class="left-panel">
+                <h2>TODO LIST</h2>
+                <div class="input-container">
+                    <label for="task">Title</label>
+                    <input type="text" id="task" placeholder="Add a new task" maxlength="30">
+                    <label for="content">Content</label>
+                    <textarea id="content" maxlength="1000"></textarea>
+                    <label for="dueDate">Date</label>
+                    <input type="date" id="dueDate">
+                    <label for="priority">Priority</label>
+                    <div class="priority-options">
+                        <input type="radio" id="priority-low" name="priority" value="low" checked>
+                        <label for="priority-low">Low</label>
+                        <input type="radio" id="priority-medium" name="priority" value="medium">
+                        <label for="priority-medium">Medium</label>
+                        <input type="radio" id="priority-high" name="priority" value="high">
+                        <label for="priority-high">High</label>
+                    </div>
+                    <button class="add-button" onclick="addTask()">Add Task</button>
+                </div>
+            </div>
+            <div class="right-panel">
+                <div class="header">
+                    <div class="priority-indicators">
+                        <span class="indicator low" id="low-count" onclick="filterByPriority('low')">0</span>
+                        <span class="indicator medium" id="medium-count" onclick="filterByPriority('medium')">0</span>
+                        <span class="indicator high" id="high-count" onclick="filterByPriority('high')">0</span>
+                    </div>
+                    <div class="current-date"></div>
+                    <div class="filters">
+                        <button onclick="filterTasks('all')">All</button>
+                        <button onclick="filterTasks('unfinished')">Unfinished</button>
+                        <button onclick="filterTasks('in-progress')">In Progress</button>
+                        <button onclick="filterTasks('completed')">Completed</button>
+                    </div>
+                </div>
+                <div class="todo-list" id="taskList"></div>
+            </div>
+            <div id="editModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>EDIT TASK</h2>
+                    <label for="edit-task">Title</label>
+                    <input type="text" id="edit-task">
+                    <label for="edit-content">Content</label>
+                    <textarea id="edit-content"></textarea>
+                    <label for="edit-dueDate">Date</label>
+                    <input type="date" id="edit-dueDate">
+                    <label for="edit-priority">Priority</label>
+                    <div class="priority-options">
+                        <input type="radio" id="edit-priority-low" name="edit-priority" value="low">
+                        <label for="edit-priority-low">Low</label>
+                        <input type="radio" id="edit-priority-medium" name="edit-priority" value="medium">
+                        <label for="edit-priority-medium">Medium</label>
+                        <input type="radio" id="edit-priority-high" name="edit-priority" value="high">
+                        <label for="edit-priority-high">High</label>
+                    </div>
+                    <button class="save-button" onclick="saveEdit()">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
