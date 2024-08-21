@@ -14,9 +14,9 @@
 
 많은 할 일 관리 앱들이 복잡한 인터페이스를 가지고 있어 오히려 사용자에게 부담을 주는 경우가 있는데, 이 To-Do List는 간단하면서도 핵심 기능에 충실하여 사용자가 작업에 집중할 수 있도록 돕습니다.
 
-![image.png](README%20md%20bb79d7d86d6d433584e1828f8889fa54/image.png)
+![image.png](images/image.png)
 
-![image.png](README%20md%20bb79d7d86d6d433584e1828f8889fa54/image%201.png)
+![image.png](images/image1.png)
 
 ### ▶️ 주요 기능 특징
 
